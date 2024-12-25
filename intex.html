@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3>calc</h3>
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <input class="input" type="text" id="display" disabled />
+
+      <div class="btn-group">
+        <button class="btn" onclick="handleButtonClick('7')">7</button>
+        <button class="btn" onclick="handleButtonClick('8')">8</button>
+        <button class="btn" onclick="handleButtonClick('9')">9</button>
+        <button class="btn-md" onclick="handleDelete()">DEL</button>
+
+        <br />
+        <button class="btn" onclick="handleButtonClick('4')">4</button>
+        <button class="btn" onclick="handleButtonClick('5')">5</button>
+        <button class="btn" onclick="handleButtonClick('6')">6</button>
+        <button class="btn" onclick="handleButtonClick('+')">+</button>
+
+        <br />
+        <button class="btn" onclick="handleButtonClick('1')">1</button>
+        <button class="btn" onclick="handleButtonClick('2')">2</button>
+        <button class="btn" onclick="handleButtonClick('3')">3</button>
+        <button class="btn" onclick="handleButtonClick('-')">-</button>
+
+        <br />
+        <button class="btn" onclick="handleButtonClick('.')">.</button>
+        <button class="btn" onclick="handleButtonClick('0')">0</button>
+        <button class="btn" onclick="handleButtonClick('*')">*</button>
+        <button class="btn" onclick="handleButtonClick('/')">/</button>
+
+        <br />
+        <div class="advanced-btn hidden">
+          <button class="sm-btn" onclick="calculatePercentage()">%</button>
+          <button class="sm-btn" onclick="memoryClear()">MC</button>
+          <button class="sm-btn" onclick="memoryRecall()">MR</button>
+          <button class="sm-btn" onclick="memoryAdd()">M+</button>
+          <button class="sm-btn" onclick="memorySubtract()">M-</button>
+          <button class="sm-btn" onclick="calculateSquareRoot()">√</button>
+        </div>
+        <button class="btn-lg" id="reset" onclick="handleReset()">RESET</button>
+        <button class="btn-lg" onclick="calculateResult()">=</button>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
